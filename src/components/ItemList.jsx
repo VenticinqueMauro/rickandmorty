@@ -29,7 +29,7 @@ export const ItemList = () => {
 
 
     return (
-        <>
+        <div>
             {/* <h1 className='top-0 z-10 mt-5 text-5xl text-center text-primary'>Rick & Morty</h1> */}
             <img className='mx-auto' src={'https://1000marcas.net/wp-content/uploads/2022/04/Rick-and-Morty.png'} alt='Rick&Morty' width={'300'} />
             <div className='z-10 flex items-center justify-around mt-5'>
@@ -52,6 +52,6 @@ export const ItemList = () => {
                     </div>
                     
             }
-        </>
+        </div>
     )
 }

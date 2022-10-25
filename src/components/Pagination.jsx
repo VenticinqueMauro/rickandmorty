@@ -22,20 +22,20 @@ export const Pagination = ({ page, setPage }) => {
     }
 
     return (
-        <div className="btn-group ">
+        <div className="btn-group">
             <button className="btn btn-sm"
-            onClick={() => previusx10()} disabled={page <= 10 && true}><i className="fa-solid fa-backward"></i></button>
+            onClick={() => previusx10()} disabled={page <= 10 && true}><i className="fa-solid fa-backward hover:text-success"></i></button>
             
             <button className="btn btn-sm"
-                onClick={() => previusx1()} disabled={page <= 1 && true}><i className="fa-solid fa-caret-left"></i></button>
+                onClick={() => previusx1()} disabled={page <= 1 && true}><i className="fa-solid fa-caret-left hover:text-success"></i></button>
 
-            <button className="btn btn-sm">Page: {page}</button>
+            <button className="btn btn-sm hover:text-success">Page: {page}</button>
 
             <button className="btn btn-sm"
-                onClick={() => nextx1()} disabled={page >= 42 && true}><i className="fa-solid fa-caret-right"></i></button>
+                onClick={() => nextx1()} disabled={page >= 42 && true}><i className="fa-solid fa-caret-right hover:text-success"></i></button>
                 
             <button className="btn btn-sm"
-            onClick={() => nextx10()} disabled={page >= 32 && true}><i className="fa-solid fa-forward"></i></button>
+            onClick={() => nextx10()} disabled={page >= 32 && true}><i className="fa-solid fa-forward hover:text-success"></i></button>
 
         </div>
     )
