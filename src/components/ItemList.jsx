@@ -32,16 +32,15 @@ export const ItemList = () => {
         <div>
             {/* <h1 className='top-0 z-10 mt-5 text-5xl text-center text-primary'>Rick & Morty</h1> */}
             <img className='mx-auto' src={'https://1000marcas.net/wp-content/uploads/2022/04/Rick-and-Morty.png'} alt='Rick&Morty' width={'300'} />
-            <div className='z-10 flex items-center justify-around mt-5'>
-            <Pagination page={page} setPage={setPage} />
-            <InputSearch setText={setText} />
+            <div className='flex justify-center'>
+                <InputSearch setText={setText} />
             </div>
             {
                 loading
                     ?
-                    <Loading  />
+                    <Loading />
                     :
-                    <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5'>
+                    <div className='grid grid-cols-2 gap-5 md:grid-cols-3 lg:grid-cols-4'>
                         {
                             filterCharacter.map(character => {
                                 return (
@@ -50,8 +49,12 @@ export const ItemList = () => {
                             })
                         }
                     </div>
-                    
+
             }
+            <div className='flex justify-center pb-10 mt-10'>
+                <Pagination page={page} setPage={setPage} />
+            </div>
+
         </div>
     )
 }
