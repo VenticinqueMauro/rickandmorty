@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 export const Item = ({ character }) => {
     return (
@@ -10,9 +11,9 @@ export const Item = ({ character }) => {
                 </h2>
                 <div className='flex items-center gap-2 justify-evenly'>
                     <div>
-                    {character.gender === 'Male' && <i className="fa-solid fa-person text-primary"></i>}
-                    {character.gender === 'Female' && <i className="fa-solid fa-person-dress text-accent"></i>}                
-                    {character.gender === 'unknown' && <i className="fa-solid fa-question text-warning"></i>}
+                    {character.gender === 'Male' && <i className="text-xl fa-solid fa-person text-primary"></i>}
+                    {character.gender === 'Female' && <i className="text-xl fa-solid fa-person-dress text-accent"></i>}                
+                    {character.gender === 'unknown' && <i className="text-xl fa-solid fa-question text-warning"></i>}
                     </div>
                     <div>
                     {character.status === 'unknown' && <div className="badge badge-warning">Unknown</div>}
@@ -20,9 +21,8 @@ export const Item = ({ character }) => {
                     {character.status === 'Dead' && <div className="badge badge-error">Dead</div>}          
                     </div>
                 </div>
-                <div className="justify-start pt-5 mx-auto text-center">
-                    <button className="rounded-full btn btn-info btn-sm">Info</button>
-                </div>
+                <div className="divider"></div> 
+                    <Link to={`/character/${character.id}`} className="rounded-full btn btn-info btn-sm">Details</Link>
             </div>
         </div>
     )

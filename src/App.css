@@ -7,8 +7,23 @@
   box-sizing: border-box;
 }
 
+.app{
+  width: 100%;
+  height: 100vh;
+}
+
 
 body {
   font-family: 'Chelsea Market', cursive;
 }
+.card{
+  transition: 300ms ease-in-out;
+}
+.card:hover{
+  box-shadow: 2px 2px 15px #07ff07;
+}
 
+.divider{
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
