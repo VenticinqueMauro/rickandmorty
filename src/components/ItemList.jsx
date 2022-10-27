@@ -4,12 +4,14 @@ import { Loading } from './Loading'
 import { Pagination } from './Pagination'
 import { InputSearch } from './InputSearch'
 
+
+
 export const ItemList = () => {
 
     const [characters, setCharacters] = useState([])
     const [page, setPage] = useState(1)
     const [loading, setLoading] = useState(true)
-    const [text, setText ] = useState('')
+    const [text, setText] = useState('')
 
 
     useEffect(() => {
@@ -40,21 +42,22 @@ export const ItemList = () => {
                     ?
                     <Loading />
                     :
-                    <div className='grid grid-cols-1 gap-5 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4'>
+                    <ul className='grid grid-cols-1 gap-5 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4'>
                         {
                             filterCharacter.map(character => {
                                 return (
-                                    <Item key={character.id} character={character} />
+                                    <li>
+                                        <Item key={character.id} character={character} />
+                                    </li>
                                 )
                             })
                         }
-                    </div>
+                    </ul>
 
             }
             <div className='flex justify-center pb-10 mt-10'>
                 <Pagination page={page} setPage={setPage} />
             </div>
-
         </div>
     )
 }

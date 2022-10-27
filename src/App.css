@@ -7,23 +7,54 @@
   box-sizing: border-box;
 }
 
-.app{
+
+
+#video {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
-  height: 100vh;
+  height: 100%;
+  object-fit: cover;
 }
+
+.contaner{
+  position: relative;
+  z-index: 100;
+}
+
 
 
 body {
   font-family: 'Chelsea Market', cursive;
 }
-.card{
+
+.cardContainer {
+  border-radius: 37px 37px 37px 37px;
+  -moz-border-radius: 37px 37px 37px 37px;
+  -webkit-border-radius: 37px 37px 37px 37px;
   transition: 300ms ease-in-out;
 }
-.card:hover{
+
+.cardContainer:hover,
+.cardetail:hover {
   box-shadow: 2px 2px 15px #07ff07;
 }
 
-.divider{
+.cardContainerDetail {
+  border-radius: 200px 70px 70px 200px;
+  -moz-border-radius: 200px 70px 70px 200px;
+  -webkit-border-radius: 200px 70px 70px 200px;
+  transition: 300ms ease-in-out;
+}
+
+.cardetail {
+  border-radius: 200px 200px 200px 200px;
+  -moz-border-radius: 200px 200px 200px 200px;
+  -webkit-border-radius: 200px 200px 200px 200px;
+}
+
+.divider {
   margin-top: 0px;
   margin-bottom: 0px;
 }
