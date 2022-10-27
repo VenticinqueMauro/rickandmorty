@@ -5,14 +5,14 @@ import { Link } from 'react-router-dom'
 export const Item = ({ character }) => {
 
     return (
-        <div className="w-56 mx-auto mt-10 shadow-xl card cardContainer bg-base-300">
+        <div className="w-56 mx-auto mt-10 bg-transparent shadow-xl card cardContainer ">
             <figure ><img src={character.image} alt="Shoes" /></figure>
             <div className="mx-auto card-body">
-                <h2 className="card-title">
+                <h2 className="card-title textShadow">
                     {character.name}
                 </h2>
-                <div className='flex items-center gap-2 justify-evenly'>
-                    <div>
+                <div className='flex items-center gap-2 justify-evenly '>
+                    <div className='textShadow'>
                         {character.gender === 'Male' && <i className="text-xl fa-solid fa-person text-primary"></i>}
                         {character.gender === 'Female' && <i className="text-xl fa-solid fa-person-dress text-accent"></i>}
                         {character.gender === 'unknown' && <i className="text-xl fa-solid fa-question text-warning"></i>}

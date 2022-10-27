@@ -4,8 +4,6 @@ import { Error404 } from './components/Error404';
 import { ItemDetailList } from './components/ItemDetailList';
 import { ItemList } from './components/ItemList';
 
-// import videoFondo from './video/videoFondo.mp4'
-{/* <video src={videoFondo} autoPlay loop muted /> */ }
 
 function App() {
 

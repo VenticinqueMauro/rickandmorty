@@ -46,8 +46,8 @@ export const ItemList = () => {
                         {
                             filterCharacter.map(character => {
                                 return (
-                                    <li>
-                                        <Item key={character.id} character={character} />
+                                    <li key={character.id}>
+                                        <Item  character={character} />
                                     </li>
                                 )
                             })
