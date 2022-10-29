@@ -16,15 +16,14 @@
 }
 
 
-
 body {
   font-family: 'Chelsea Market', cursive;
 }
 
 .cardContainer {
-  border-radius: 37px 37px 37px 37px;
+  /* border-radius: 37px 37px 37px 37px;
   -moz-border-radius: 37px 37px 37px 37px;
-  -webkit-border-radius: 37px 37px 37px 37px;
+  -webkit-border-radius: 37px 37px 37px 37px; */
   box-shadow: 2px 2px 30px #000;
   background-color: rgba(0, 0, 0, 0.089);
 
@@ -37,12 +36,12 @@ body {
 }
 
 .cardContainerDetail {
-  border-radius: 200px 70px 70px 200px;
+  /* border-radius: 200px 70px 70px 200px;
   -moz-border-radius: 200px 70px 70px 200px;
-  -webkit-border-radius: 200px 70px 70px 200px;
+  -webkit-border-radius: 200px 70px 70px 200px; */
   transition: 300ms ease-in-out;
   box-shadow: 2px 2px 30px #000;
-  background-color: rgba(0, 0, 0, 0.089);
+  background-color: #00000039;
 }
 
 .textShadow{
@@ -50,12 +49,135 @@ body {
 }
 
 .cardetail {
-  border-radius: 200px 200px 200px 200px;
+  /* border-radius: 200px 200px 200px 200px;
   -moz-border-radius: 200px 200px 200px 200px;
-  -webkit-border-radius: 200px 200px 200px 200px;
+  -webkit-border-radius: 200px 200px 200px 200px; */
+  box-shadow: 2px 2px 15px #000;
 }
 
 .divider {
   margin-top: 0px;
   margin-bottom: 0px;
 }
+
+
+/* From uiverse.io by @fanishah */
+.planet {
+  display: block;
+  width: 125px;
+  height: 125px;
+  position: relative;
+  transform-style: preserve-3d;
+  border-radius: 50%;
+  background: #fcc96b;
+  background: #fcc96b;
+  background: linear-gradient(
+    180deg,
+    #fcc96b 0%,
+    #fcc96b 15%,
+    #f7ae01 15%,
+    #f7ae01 19%,
+    #fcc96b 19%,
+    #fcc96b 22%,
+    #f7ae01 22%,
+    #f7ae01 28%,
+    #fcc96b 28%,
+    #fcc96b 31%,
+    #fcc96b 33%,
+    #fcc96b 36%,
+    #f7ae01 36%,
+    #f7ae01 48%,
+    #fcc96b 48%,
+    #fcc96b 55%,
+    #f7ae01 55%,
+    #f7ae01 66%,
+    #fcc96b 66%,
+    #fcc96b 70%,
+    #f7ae01 70%,
+    #f7ae01 73%,
+    #fcc96b 73%,
+    #fcc96b 82%,
+    #f7ae01 82%,
+    #c7ba9d 86%,
+    #fcc96b 86%
+  );
+  box-shadow: inset 0 0 25px rgba(0, 0, 0, 0.25),
+    inset 8px -4px 6px rgba(199, 128, 0, 0.5),
+    inset -8px 4px 8px rgba(255, 235, 199, 0.5), inset 20px -5px 12px #f7ae01,
+    0 0 100px #ffffff59;
+  transform: rotateZ(-15deg);
+}
+
+.planet::before {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  border: 16px solid #e1a519;
+  border-top-width: 0;
+  border-radius: 50%;
+  box-shadow: 0 -2px 0 #c18620;
+  animation: rings1 0.8s infinite linear;
+}
+
+.planet::after {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  border: 8px solid #d48b0c;
+  border-top-width: 0;
+  border-radius: 50%;
+  box-shadow: 0 -2px 0 #b99309;
+  animation: rings2 0.8s infinite linear;
+}
+
+@keyframes rings1 {
+  0% {
+    transform: rotateX(65deg) rotateZ(0deg) scale(1.75);
+  }
+
+  100% {
+    transform: rotateX(65deg) rotateZ(360deg) scale(1.75);
+  }
+}
+
+@keyframes rings2 {
+  0% {
+    transform: rotateX(65deg) rotateZ(0deg) scale(1.7);
+  }
+
+  100% {
+    transform: rotateX(65deg) rotateZ(360deg) scale(1.7);
+  }
+}
+
+
+::-webkit-scrollbar {
+  width: 8px;     /* Tamaño del scroll en vertical */
+  height: 8px;    /* Tamaño del scroll en horizontal */
+  /* display: none;  Ocultar scroll */
+}
+
+
+/* Ponemos un color de fondo y redondeamos las esquinas del thumb */
+::-webkit-scrollbar-thumb {
+  background: #07ff07;
+  border-radius: 4px;
+}
+
+/* Cambiamos el fondo cuando esté en active */
+::-webkit-scrollbar-thumb:active {
+  background-color: #0ca6e9;
+}
+
+/* Ponemos un color de fondo y redondeamos las esquinas del track */
+::-webkit-scrollbar-track {
+  background: #002433;
+  border-radius: 4px;
+}
+

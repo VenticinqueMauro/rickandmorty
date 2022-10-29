@@ -2,15 +2,9 @@ import React from 'react'
 
 export const Loading = () => {
     return (
-        <div className='h-screen'>
-            <div className="pt-10 m-auto spinner">
-                <span>L</span>
-                <span>O</span>
-                <span>A</span>
-                <span>D</span>
-                <span>I</span>
-                <span>N</span>
-                <span>G</span>
+        <div className='h-screen pt-20 text-center'>
+            <p className='pt-5 mx-auto text-xl text-warning'>Loading...</p>
+            <div className="mx-auto planet">
             </div>
         </div>
     )

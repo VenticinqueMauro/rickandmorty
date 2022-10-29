@@ -1,22 +1,30 @@
 import React from 'react'
+import { Howl } from 'howler'
+import pasarPagina from '../sound/cambiarPagina.mp3'
 
 export const Pagination = ({ page, setPage }) => {
 
-
+    const sound = new Howl({
+        src: pasarPagina
+    })
 
     const previusx1 = () => {
+        sound.play()
         page > 1 && setPage(page - 1)
     }
 
     const previusx10 = () => {
+        sound.play()
         page > 10 && setPage(page - 10)
     }
 
     const nextx1 = () => {
+        sound.play()
         setPage(page + 1)
     }
 
     const nextx10 = () => {
+        sound.play()
         page === 1 ? setPage(page + 9 ) : setPage(page + 10)
         page >= 32 && setPage(false)
     }
