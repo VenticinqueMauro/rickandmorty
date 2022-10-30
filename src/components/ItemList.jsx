@@ -25,14 +25,15 @@ export const ItemList = () => {
                 .then(response => response.json())
                 .then(data => setCharacters(data.results))
             setTimeout(() => {
-                setLoading(false)                
+                setLoading(false)
             }, 800);
         }
-
+        
         callApi()
     }, [page])
 
     const filterCharacter = characters.filter(character => character.name.toLowerCase().includes(text.toLowerCase()))
+
 
 
 
@@ -55,7 +56,7 @@ export const ItemList = () => {
                                     ?
                                     filterCharacter.map(character => {
                                         return (
-                                            <li key={character.id} >
+                                            <li key={character.id}>
                                                 <Item character={character} />
                                             </li>
                                         )
